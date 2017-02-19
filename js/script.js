@@ -7,9 +7,10 @@ button.addEventListener('click', function(){
 
 var paragraph = document.getElementById('joke');
 
+var xhr = new XMLHttpRequest();
+
 // implementacja funkcji getJoke()
 function getJoke() {
-  var xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.addEventListener('load', function(){
     var response = JSON.parse(xhr.response);
