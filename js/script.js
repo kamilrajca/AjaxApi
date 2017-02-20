@@ -17,9 +17,16 @@ function searchCountries() {
 
 function showCountriesList(resp) {
   countriesList.empty();
-  resp.forEach(function(item) {
     resp.forEach(function(item){
     $('<li>').text(item.name + ' - stolica: ' + item.capital).appendTo(countriesList);
-    });
 });
 }
+
+// enter zamiast klikania w button
+$('form').submit(function(event) {
+  if ( $('input:first').val() === 'correct' ) {
+    return;
+  }
+  $('span').text('Not valid!').show().fadeOut(1000);
+  event.preventDefault();
+});
