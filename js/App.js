@@ -11,8 +11,8 @@ function randomString() {
 // komunikacja z serwerem
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
-  'X-Client-Id': <[1496]>,
-  'X-Auth-Token': <[9c686913b5c141fc12d7f2b222d89d2b]>
+  'X-Client-Id': 1496,
+  'X-Auth-Token': 9c686913b5c141fc12d7f2b222d89d2b
 };
 
 // pobieranie z serwera informacji
