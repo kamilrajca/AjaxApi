@@ -21,11 +21,11 @@ $('.create-column')
         board.createColumn(column);
       }
     });
-});
+  });
   
 function initSortable() {
-    $('.card-list').sortable({
-      connectWith: '.card-list',
-      placeholder: 'card-placeholder'
-    }).disableSelection();
-  }
+  $('.card-list').sortable({
+    connectWith: '.card-list',
+    placeholder: 'card-placeholder'
+  }).disableSelection();
+}

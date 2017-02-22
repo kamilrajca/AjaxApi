@@ -1,31 +1,21 @@
-// OGÓLNA FUNKCJA
-function randomString() {
-  var chars = '0123456789abcdefghiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXTZ'.split();
-  var str = '', i;
-  for (i = 0; i < 10; i++) {
-    str += chars[Math.floor(Math.random() * chars.length)];
-  }
-  return str;
-}
-
 // komunikacja z serwerem
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
   'X-Client-Id': 1496,
-  'X-Auth-Token': 9c686913b5c141fc12d7f2b222d89d2b
+  'X-Auth-Token': '9c686913b5c141fc12d7f2b222d89d2b'
 };
 
-// pobieranie z serwera informacji
 $.ajaxSetup({
   headers: myHeaders
-  $.ajax({
-    url: baseUrl + '/board',
-    method: 'GET',
-    success: function(response) {
-      setupColumns(response.columns);
-    }
-  });
+});
 
+// pobieranie z serwera informacji
+$.ajax({
+  url: baseUrl + '/board',
+  method: 'GET',
+  success: function(response) {
+    setupColumns(response.columns);
+  }
 });
 
 // tworzenie kolumn
