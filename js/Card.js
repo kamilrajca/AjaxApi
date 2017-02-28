@@ -7,7 +7,6 @@ function Card(id, name) {
   this.element = createCard();
 
   function createCard() {
-    console.log('createCard');
     var card = $('<li class="card"></li>');
     var cardDeleteBtn = $('<button class="btn-delete">x</button>');
     var cardDescription = $('<p class="card-description"></p>');
